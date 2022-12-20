@@ -1,0 +1,25 @@
+{
+  "name": "jmc",
+  "displayName": "Joyshock Mapper config language",
+  "description": "Joyshock Mapper config language description",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "joyshockconfig",
+      "aliases": ["Joyshock Mapper", "joyshockconfig"],
+      "extensions": [".txt"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "joyshockconfig",
+      "scopeName": "jmc",
+      "path": "./syntaxes/joyshockconfig.tmLanguage.json"
+    }]
+  }
+}
