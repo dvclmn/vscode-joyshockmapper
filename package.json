@@ -1,7 +1,8 @@
 {
-  "name": "jmc",
-  "displayName": "Joyshock Mapper config language",
-  "description": "Joyshock Mapper config language description",
+  "name": "vscode-joyshockmapper",
+  "displayName": "JoyShockMapper Language Support",
+  "description": "Language support and auto-completion for JoyShockMapper *.txt configuration files.",
+  "author": "dvclmn",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.74.0"
@@ -9,6 +10,11 @@
   "categories": [
     "Programming Languages"
   ],
+  "keywords": [
+		"joyshock",
+		"joyshockmapper",
+		"JSM"
+	],
   "contributes": {
     "languages": [{
       "id": "joyshockconfig",
