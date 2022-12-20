@@ -16,6 +16,10 @@
       "id": "jsmconfig",
       "aliases": ["JoyShockMapper config", "jsmconfig"],
       "extensions": [".txt"],
+      "icon": {
+        "dark": "icon_filetype.png",
+        "light": "icon_filetype.png"
+      },
       "configuration": "./language-configuration.json"
     }],
     "grammars": [{
@@ -24,6 +28,7 @@
       "path": "./syntaxes/jsmconfig.tmLanguage.json"
     }]
   },
+  "icon": "icon.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/dvclmn/vscode-joyshockmapper.git"
