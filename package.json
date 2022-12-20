@@ -15,7 +15,7 @@
     "languages": [{
       "id": "jsmconfig",
       "aliases": ["JoyShockMapper config", "jsmconfig"],
-      "extensions": [".txt"],
+      "extensions": [".jsm.txt"],
       "icon": {
         "dark": "icon_filetype.png",
         "light": "icon_filetype.png"

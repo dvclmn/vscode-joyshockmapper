@@ -1,15 +1,30 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "JoyShockMapper config",
+	"scopeName": "text.jsmconfig",
 	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		}
+		{"include": "#assignment"},
+		{"include": "#comments"},
+		{"include": "#keywords"},
+		{"include": "#strings"},
+		{"include": "#variables"}
 	],
 	"repository": {
+		"assignment": {
+			"begin": "^(#[0-9]{1,4})\\s*(=)\\s*([^{]*)\\{", 
+			"beginCaptures": {
+				"1": { "name": "variable" },
+				"3": { "name": "entity.name.function" }
+			},
+			"end": "\\}",
+			"patterns": [
+				{"name": "constant.numeric", "match": "[0-9.]+"}
+			]
+		},
+		"comments": {
+			"match": "# .*$",
+			"name": "comment.jsmconfig"
+		},
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.jsmconfig",
@@ -26,7 +41,27 @@
 					"match": "\\\\."
 				}
 			]
-		}
-	},
-	"scopeName": "text.jsmconfig"
+		},
+		"variables": {
+			"match": "(?<!\\.)\\b((\\w+(?=\\.))|(\\w+\\b(?!\\()))",
+			"captures": {
+			  "2": {
+				"patterns": [
+				  {
+					"include": "#variables_language"
+				  }
+				],
+				"name": "variable.other.object.ahk2"
+			  },
+			  "3": {
+				"patterns": [
+				  {
+					"include": "#variables_language"
+				  }
+				]
+			  }
+			},
+			"name": "variable.other.ahk2"
+		  }
+	}
 }
