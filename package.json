@@ -3,8 +3,10 @@
   "displayName": "JoyShockMapper config language",
   "description": "Language support and auto-completion for JoyShockMapper *.txt configuration files.",
   "version": "0.0.1",
+  "publisher": "dvclmn",
+  "license": "MIT",
   "engines": {
-    "vscode": "^1.74.0"
+    "vscode": "^1.20.0"
   },
   "categories": [
     "Programming Languages"
@@ -21,5 +23,9 @@
       "scopeName": "text.jsmconfig",
       "path": "./syntaxes/jsmconfig.tmLanguage.json"
     }]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dvclmn/vscode-joyshockmapper.git"
   }
 }
