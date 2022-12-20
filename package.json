@@ -1,8 +1,7 @@
 {
   "name": "vscode-joyshockmapper",
-  "displayName": "JoyShockMapper Language Support",
+  "displayName": "JoyShockMapper config language",
   "description": "Language support and auto-completion for JoyShockMapper *.txt configuration files.",
-  "author": "dvclmn",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.74.0"
@@ -10,22 +9,17 @@
   "categories": [
     "Programming Languages"
   ],
-  "keywords": [
-		"joyshock",
-		"joyshockmapper",
-		"JSM"
-	],
   "contributes": {
     "languages": [{
-      "id": "joyshockconfig",
-      "aliases": ["Joyshock Mapper", "joyshockconfig"],
+      "id": "jsmconfig",
+      "aliases": ["JoyShockMapper config", "jsmconfig"],
       "extensions": [".txt"],
       "configuration": "./language-configuration.json"
     }],
     "grammars": [{
-      "language": "joyshockconfig",
-      "scopeName": "jmc",
-      "path": "./syntaxes/joyshockconfig.tmLanguage.json"
+      "language": "jsmconfig",
+      "scopeName": "text.jsmconfig",
+      "path": "./syntaxes/jsmconfig.tmLanguage.json"
     }]
   }
 }
